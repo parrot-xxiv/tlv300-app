@@ -107,7 +107,7 @@ npm run dev
 
 2. **Environment Variables (if needed)**
    - Go to Project Settings → Environment Variables
-   - Add `API_URL` with `https://your-backend.vercel.app`
+   - Add `VITE_API_URL` with `https://your-backend.vercel.app`
 
 3. **Deploy**
    - Click "Deploy"
