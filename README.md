@@ -2,7 +2,7 @@
 
 A full-stack web application that provides domain registration and contact information using the WhoisXMLAPI service.
 
->Temporarily live and deployed to: [https://https://tlv300-app.vercel.app](https://tlv300-app.vercel.app/)
+>Temporarily live and deployed to: [https://tlv300-app.vercel.app](https://tlv300-app.vercel.app/)
 
 
 ## Features
@@ -107,7 +107,7 @@ npm run dev
 
 2. **Environment Variables (if needed)**
    - Go to Project Settings → Environment Variables
-   - Add `WHOIS_API_KEY` with `https://your-backend.vercel.app`
+   - Add `API_URL` with `https://your-backend.vercel.app`
 
 3. **Deploy**
    - Click "Deploy"
