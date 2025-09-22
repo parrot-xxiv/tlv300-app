@@ -1,6 +1,9 @@
 # Whois Domain Lookup Application
 
-A full-stack web application that provides comprehensive domain registration and contact information using the WhoisXMLAPI service.
+A full-stack web application that provides domain registration and contact information using the WhoisXMLAPI service.
+
+>Temporarily live and deployed to: [https://https://tlv300-app.vercel.app](https://tlv300-app.vercel.app/)
+
 
 ## Features
 
@@ -13,13 +16,13 @@ A full-stack web application that provides comprehensive domain registration and
 ## Tech Stack
 
 - **Backend**: Node.js, Express.js
-- **Frontend**: React.js
-- **Styling**: CSS3 with gradient backgrounds and animations
+- **Frontend**: Vite + React.js
+- **Styling**: TailwindCSS + Shadcn Components
 - **HTTP Client**: Axios
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v22 or higher)
 - WhoisXMLAPI account and API key
 
 ## Setup Instructions
@@ -56,6 +59,8 @@ npm run dev
 
 ### 3. Frontend Setup
 ```bash
+
+# Navigate to frontend directory
 cd frontend
 
 # Install dependencies
@@ -66,4 +71,52 @@ npm run dev
 
 ```
 
-## Deployment Instructions
+## Vercel Dashboard Deployment
+
+### 1. Create Vercel Account
+- Go to [vercel.com](https://vercel.com)
+- Sign up with GitHub/GitLab/Bitbucket
+
+### 2. Deploy Backend
+1. **Import Project**
+   - Click "New Project"
+   - Import your repository
+   - Select directory: `backend`
+
+2. **Configure Build Settings**
+   - Framework Preset: "Other"
+   - Select: `Express`
+   - Output Directory: leave empty
+   - Install Command: `npm install`
+
+3. **Environment Variables**
+   - Go to Project Settings → Environment Variables
+   - Add `WHOIS_API_KEY` with your API key value
+   - Add `ORIGIN` with the URL of your frontend
+
+4. **Deploy**
+   - Click "Deploy"
+   - Note the deployment URL (e.g., `https://your-backend.vercel.app`)
+
+### 3. Deploy Frontend
+1. **Import Frontend Project**
+   - Click "New Project"
+   - Import frontend repository
+   - Framework Preset: `Vite`
+   - Choose defaults
+
+2. **Environment Variables (if needed)**
+   - Go to Project Settings → Environment Variables
+   - Add `WHOIS_API_KEY` with `https://your-backend.vercel.app`
+
+3. **Deploy**
+   - Click "Deploy"
+   - Your app will be live at the provided URL
+
+
+### 5. Custom Domain (Optional)
+- Project Settings → Domains
+- Add your custom domain
+- Follow DNS configuration instructions
+
+The dashboard automatically handles builds, deployments, and SSL certificates.
